@@ -140,14 +140,8 @@ const toggleStatus = async (id, currentStatus) => {
           style={styles.input}
           placeholder="Borrowed date (MM/DD/YYYY)"
           value={date}
+          onChangeText={setDate}
           maxLength={16}
-          onChangeText={(setDate) => {
-            setAmount(setDate);
-            if (setDate.length < 10) {
-              console.warn("Input a Proper Date Format");
-              }
-            }
-          }
         />
 {/* Buttons for Add and Update of Debtor's */}
         <Pressable
